@@ -1,5 +1,3 @@
-
-import numpy as np
 import sqlalchemy
 import datetime as dt
 from sqlalchemy.ext.automap import automap_base
@@ -18,8 +16,13 @@ Delays = Base.classes.delays
 
 app = Flask(__name__)
 
-@app.route("/test")
-def test():
+@app.route("/")
+def index():
+    
+    return render_template("index.html")
+
+@app.route("/locations")
+def location():
     
     session = Session(engine)
    
