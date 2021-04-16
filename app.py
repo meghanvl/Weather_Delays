@@ -12,7 +12,7 @@ Base = automap_base()
 
 Base.prepare(engine, reflect=True)
 
-Delays = Base.classes.delays
+Delays = Base.classes.ordtable
 
 app = Flask(__name__)
 
