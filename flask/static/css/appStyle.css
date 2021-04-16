@@ -5,9 +5,10 @@
     background-color: rgba(71, 78, 141, 0.411); 
   }
 
-body {
-    background-color:darkgray; 
-  }
+  body {
+    background: url('../static/img/airplane.jpg') center no-repeat fixed;
+    background-size: cover;
+}
 
 p {
     color:rgb(202, 175, 228);
