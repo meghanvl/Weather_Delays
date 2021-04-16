@@ -1,0 +1,4 @@
+SELECT * FROM delays d
+LEFT JOIN duration r ON
+d.FL_DATE=r.FL_DATE
+WHERE OP_CARRIER = "AA";
