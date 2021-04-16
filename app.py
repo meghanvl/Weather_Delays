@@ -30,16 +30,15 @@ def location():
     
     session.close()
     
-    delays = []
+    delay_data = []
     for row in results:
         delay_dict = {}
         delay_dict["Date"] = row.FL_DATE 
         delay_dict["Origin"] = row.ORIGIN
         delay_dict["Delay Duration"] = row.DEP_DELAY   
-        delays.append(delay_dict)
+        delay_data.append(delay_dict)
 
-    return jsonify(delays)
+    return jsonify(delay_data)
 
 if __name__ == "__main__":
     app.run(debug=True)
-
