@@ -1,4 +1,3 @@
-import numpy as np
 import sqlalchemy
 import datetime as dt
 from sqlalchemy.ext.automap import automap_base
@@ -17,8 +16,13 @@ Delays = Base.classes.delays
 
 app = Flask(__name__)
 
-@app.route("/test")
-def test():
+@app.route("/")
+def index():
+    
+    return render_template("index.html")
+
+@app.route("/locations")
+def location():
     
     session = Session(engine)
    
@@ -26,15 +30,15 @@ def test():
     
     session.close()
     
-    delays = []
+    delay_data = []
     for row in results:
         delay_dict = {}
         delay_dict["Date"] = row.FL_DATE 
         delay_dict["Origin"] = row.ORIGIN
         delay_dict["Delay Duration"] = row.DEP_DELAY   
-        delays.append(delay_dict)
+        delay_data.append(delay_dict)
 
-    return jsonify(delays)
+    return jsonify(delay_data)
 
 if __name__ == "__main__":
     app.run(debug=True)
