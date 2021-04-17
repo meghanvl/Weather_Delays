@@ -2,15 +2,16 @@
     margin-top: 10px; 
     margin-bottom: 62px;
     padding: 10px 20px 15px; 
-    background-color: rgba(71, 78, 141, 0.411); 
+    background-color:rgb(203, 220, 243); 
   }
 
-body {
-    background-color:darkgray; 
-  }
+/* body {
+    background: url('static/img/airplane.jpg') center no-repeat fixed;
+    background-size: cover;
+} */
 
 p {
-    color:rgb(202, 175, 228);
+    color:rgb(89, 155, 241);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px; 
 }
@@ -20,7 +21,7 @@ h5 {
 }
 
 .btn-primary {
-  background-color: rgb(53, 121, 136);
+  background-color: rgb(111, 160, 235);
 }
 
 .panel-primary {
