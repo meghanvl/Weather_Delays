@@ -4,11 +4,10 @@ The Weather Delays project will relay published flight cancellations and delays 
 
 Inspiration for the Weather Delays projects stems from the previous Oz Project and the complete fascination with travel in the year 2020. 
 
-## Group Members:
+# Group Members:
 Sara Riggs, Kerry Wehner, Kayla St. Germain, Meghan Luoma, Kirby Miller
 
-# Proposal:
-DataSets:<br> 
+# DataSets:
 Iowa Environmental Mesonet: https://mesonet.agron.iastate.edu/request/download.phtml?network=IL_ASOS
 
 Bureau of Transportation: https://www.kaggle.com/yuanyuwendymu/airline-delay-and-cancellation-data-2009-2018?select=2018.csv
