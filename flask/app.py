@@ -1,11 +1,24 @@
-import numpy as np
 import sqlalchemy
-import datetime as dt
+import os
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
+from flask import (
+    Flask,
+    render_template,
+    jsonify,
+    request,
+    redirect)
 
-from flask import Flask, jsonify, render_template
+app = Flask(__name__)
+
+from flask_sqlalchemy import SQLAlchemy
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '') or "sqlite:///ORD_Delays.sqlite"
+
+# Remove tracking modifications
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
 
 engine = create_engine("sqlite:///ORD_Delays.sqlite")
 
@@ -13,9 +26,7 @@ Base = automap_base()
 
 Base.prepare(engine, reflect=True)
 
-Delays = Base.classes.delays
-
-app = Flask(__name__)
+Delays = Base.classes.ordtable
 
 @app.route("/")
 def index():
@@ -31,15 +42,15 @@ def location():
     
     session.close()
     
-    delays = []
+    delay_data = []
     for row in results:
         delay_dict = {}
         delay_dict["Date"] = row.FL_DATE 
         delay_dict["Origin"] = row.ORIGIN
         delay_dict["Delay Duration"] = row.DEP_DELAY   
-        delays.append(delay_dict)
+        delay_data.append(delay_dict)
 
-    return jsonify(delays)
+    return jsonify(delay_data)
 
 if __name__ == "__main__":
     app.run(debug=True)
