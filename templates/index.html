@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flight Delays</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="static/css/appStyle.css"> 
+
+  <style>
+
+    body {
+    background-image: url('static/img/airplane.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+   
+  </style>
+  
+</head>
+
+<body> 
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+      <h1>O'Hare Airport Departure Delays</h1>
+      <p>The Bureau of Transportation reported over 67,000 flight delays due to
+        thunderstorm activity for the year 2018. Knowing the length of thunderstorm 
+        (a major cause for departure delays) you can estimate the average departure 
+        delay from O'Hare airport using The Departure Delay Tool.</p>
+      </div>
+    </div>
+
+    
+
+    <div class = "container">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+          
+            <h5 class="card-title"><b>Select Average Length of Thunderstorm (Minutes):</b></h5>
+          
+            <select id="storm" name="storm" method="GET" action="/">
+            <option value="0-60" selected>0-60</option>
+            ""
+            <option value="61-120" selected>61-120</option>
+            ""
+            <option value="121-180" selected>121-180</option>
+            ""
+            <option value="181-240" selected>181-240</option>
+            ""
+            <option value="241-300" selected>241-300</option>
+            ""
+            <option value="301-360" selected>301-360</option>
+            ""
+            <option value="361-420" selected>361-420</option>
+            ""
+            <option value="421-480" selected>421-480</option>
+            ""
+            <option value="481-540" selected>481-540</option>
+            ""
+            <option value="541-600" selected>541-600</option>
+            ""
+            <option value="601-660" selected>601-660</option>
+            ""
+            <option value="661-720" selected>661-720</option>
+            ""
+            <option value="721-780" selected>721-780</option>
+            ""
+            <option value="781-840" selected>781-840</option>
+            ""
+            <option value="841-900" selected>841-900</option>
+            ""
+            <option value="901-960" selected>901-960</option>
+            ""
+            <option value="961-1020" selected>961-1020</option>
+            ""
+            <option value="1021-1080" selected>1021-1080</option>
+            ""
+            <option value="1081-1140" selected>1081-1140</option>
+            ""
+            <option value="1141-1200" selected>1141-1200</option>
+            ""
+            <option value="1201-1260" selected>1201-1260</option>
+            ""
+            <option value="1261-1320" selected>1261-1320</option>
+            ""
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+          <div class="card">
+            <h5 class="card-title"><b>Average Delay per Day (Minutes):</b></h5>
+              <div id="delay" class="card-body">
+              </div>
+            </div>
+          </div>        
+        </div>
+    </div>
+        
+
+
+        <!-- <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Predicted Average Length of Flight Delay:</h3>
+          </div>
+          <div id="selData" class="panel-body"></div>
+        </div> -->
+      
+
+      
+      <!-- tableau card -->
+      <!-- <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><b>Tableau Dashboard</b></h5>
+              <p class="card-text">TEXT</p>
+              <a href="/locations" class="btn btn-primary">See Locations</a>
+            </div>        
+          </div>
+      </div> -->
+    
+      
+
+
+    
+  
+
+  </div>
+
+   
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+
+        <script src="./static/js/weather.js"></script>
+        
+        
+        
+        
+
+</body>
+
+</html>
