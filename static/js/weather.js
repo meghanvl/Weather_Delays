@@ -17,49 +17,49 @@ function handler() {
         delay.push("607")
     }
     else if (data === "61-120") {
-        delay.push("1476")
+        delay.push("1,476")
     }
     else if (data === "121-180") {
-        delay.push("1471")
+        delay.push("1,471")
     }
     else if (data === "181-240") {
-        delay.push("1343")
+        delay.push("1,343")
     }
     else if (data === "241-300") {
-        delay.push("1353")
+        delay.push("1,353")
     }
     else if (data === "301-360") {
-        delay.push("1236")
+        delay.push("1,236")
     }
     else if (data === "361-420") {
         delay.push("No Delay")
     }
     else if (data === "421-480") {
-        delay.push("1457")
+        delay.push("1,457")
     }
     else if (data === "481-540") {
-        delay.push("1464")
+        delay.push("1,464")
     }
     else if (data === "541-600") {
         delay.push("No Delay")
     }
     else if (data === "601-660") {
-        delay.push("1512")
+        delay.push("1,512")
     }
     else if (data === "661-720") {
-        delay.push("1633")
+        delay.push("1,633")
     }
     else if (data === "721-780") {
         delay.push("No Delay")
     }
     else if (data === "781-840") {
-        delay.push("1808")
+        delay.push("1,808")
     }
     else if (data === "841-900") {
-        delay.push("1678")
+        delay.push("1,678")
     }
     else if (data === "901-960") {
-        delay.push("1274")
+        delay.push("1,274")
     }
     else if (data === "961-1020") {
         delay.push("No Delay")
@@ -77,14 +77,14 @@ function handler() {
         delay.push("No Delay")
     }
     else 
-        delay.push("1745")
+        delay.push("1,745")
     
     
     console.log(delay)
 
     const display = d3.select("#delay");
     display.html("")
-    display.append("h6").text(`Your predicted delay will be: ${delay}.`);
+    display.append("h6").text(`Airline predicted delay is: ${delay} minutes.`);
 
 }
 
