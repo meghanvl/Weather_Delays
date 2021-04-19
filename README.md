@@ -1,6 +1,6 @@
 # Weather Delays:
 
-The Weather Delays project will relay published flight cancellations and delays from the Chicago O'Hare airport using csv files and information from the Iowa Environmental Mesonet. This project will utilize Jupyter Notebook, SQLite, Flask, Pandas, Heroku, HTML, CSS, and Sqlachemy. 
+The Weather Delays project will relay published flight cancellations and delays from the Chicago O'Hare airport using csv files and information from the Iowa Environmental Mesonet. This project will utilize Jupyter Notebook, SQLite, Flask, Pandas, Heroku, HTML, CSS, JavaScript and Sqlachemy. 
 
 Inspiration for the Weather Delays projects stems from the previous Oz Project and the complete fascination with travel in the year 2020. 
 
